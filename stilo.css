@@ -1,0 +1,122 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Home */
+#home {
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.promocoes {
+    background-color: #ffeb3b;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Destinos */
+#destinos .destinos-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#destinos .destino {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#destinos img {
+    width: 100%;
+    height: auto;
+}
+
+/* Pacotes */
+#pacotes .pacote {
+    margin-bottom: 20px;
+}
+
+/* Blog */
+#blog .post {
+    margin-bottom: 20px;
+}
+
+/* Contacto */
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contacto label {
+    margin-bottom: 5px;
+}
+
+#contacto input, #contacto textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+#contacto input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contacto input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}

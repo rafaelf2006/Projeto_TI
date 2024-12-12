@@ -1,13 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Viagens RG</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Home Page</h1>
-    <p>Rufaz and Guabriels</p>
-    
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#pacotes">Pacotes e Promoções</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home">
+        <h1>Bem-vindo à Viagens RG</h1>
+        <p>Explore os melhores destinos e reserve as suas viagens com facilidade.</p>
+        <div class="promocoes">
+            <h2>Promoções Especiais</h2>
+            <p>Aproveite nossas ofertas exclusivas para destinos incríveis!</p>
+        </div>
+    </section>
+
+    <!-- Destinos -->
+    <section id="destinos">
+        <h2>Destinos</h2>
+        <div class="destinos-lista">
+            <div class="destino">
+                <h3>Paris</h3>
+                <img src= "images/paris/paris_01.jpg" alt="Paris">
+                <p>Descubra a cidade luz, com cultura, história e gastronomia.</p>
+                <p>Preço: €1000</p>
+            </div>
+            <div class="destino">
+                <h3>Lisboa</h3>
+                <img src="images/lisboa/lisboa_01.jpg" alt="Lisboa">
+                <p>A capital de Portugal, com uma rica história e vida vibrante.</p>
+                <p>Preço: €800</p>
+            </div>
+            <!-- Adicione mais destinos aqui -->
+        </div>
+    </section>
+
+    <!-- Pacotes e Promoções -->
+    <section id="pacotes">
+        <h2>Pacotes e Promoções</h2>
+        <div class="pacote">
+            <h3>Pacote para Paris</h3>
+            <p>Inclui voos, hotel e passeios turísticos por 5 dias.</p>
+            <p>Preço: €1200</p>
+        </div>
+        <div class="pacote">
+            <h3>Pacote para Lisboa</h3>
+            <p>Inclui voos, hotel e passeios turísticos por 4 dias.</p>
+            <p>Preço: €900</p>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="post">
+            <h3>Dicas de Viagem: Como Preparar a Mala</h3>
+            <p>Aprenda a fazer a mala perfeita para qualquer destino.</p>
+        </div>
+        <div class="post">
+            <h3>Melhores Destinos de Verão</h3>
+            <p>Descubra os melhores lugares para passar as férias de verão.</p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+        <div class="informacoes-contacto">
+            <p>Telefone: +351 123 456 789</p>
+            <p>Email: contacto@viagensrg.com</p>
+            <p>Redes sociais: 
+                <a href="https://facebook.com">Facebook</a> | 
+                <a href="https://instagram.com">Instagram</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Viagens RG. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
