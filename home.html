@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagens RG</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+    <!-- Navegação  -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="pacotes.html">Pacotes e Promoções</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+     <!-- Home -->
+     <section id="home">
+        <h1>Bem-vindo à Viagens RG</h1>
+        <p>Explore os melhores destinos e reserve as suas viagens com facilidade.</p>
+        <div class="promocoes">
+            <h2>Promoções Especiais</h2>
+            <p>Aproveite as nossas ofertas exclusivas para destinos incríveis!</p>
+        </div>
+    </section>
+
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="images/pari.jpg" alt="Paris">
+            <h2>Paris - A Cidade Luz</h2>
+        </div>
+        <div class="slide">
+            <img src="images/maldives.jpg" alt="Maldivas">
+            <h2>Maldivas - Paraíso Tropical</h2>
+        </div>
+        <div class="slide">
+            <img src="images/slideshow/newyork.jpeg" alt="Nova Iorque">
+            <h2>Nova Iorque - A Cidade que Nunca Dorme</h2>
+        </div>
+        <div class="slide">
+            <img src="images/pexels-pixabay-532263.jpg" alt="Roma"                                                                                                                                                                                                                                                                                                           " alt="Roma">
+            <h2>Roma - A Cidade Eterna</h2>
+        </div>
+
+        <!-- Botões de navegação -->
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <!-- Bolinhas indicadoras -->
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll('.slide');
+            let dots = document.querySelectorAll('.dot');
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            slides.forEach(slide => slide.style.display = "none");
+            dots.forEach(dot => dot.className = dot.className.replace(" active", ""));
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Viagens RG. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

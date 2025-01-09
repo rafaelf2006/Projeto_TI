@@ -1,122 +1,166 @@
-/* Reset básico */
-* {
+/* Reset Básico */
+body, h1, h2, h3, p, ul, li, a, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #e0f7ff; /* Azul claro como fundo */
     line-height: 1.6;
 }
 
+/* Cabeçalho e Navegação */
 header {
-    
-    background-color: #333;
+    background-color: #0044cc; /* Azul vibrante */
+    padding: 15px 20px;
     color: #fff;
-    padding: 10px 0;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
+header nav ul li a:hover {
+    color: #ffeb3b; /* Amarelo brilhante para hover */
 }
 
-h1, h2, h3 {
-    color: #333;
-}
-
-/* Home */
+/* Seção Home */
 #home {
     text-align: center;
-    background-color: #f4f4f4;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #007BFF, #e0f7ff); /* Degradê de azul vibrante para azul claro */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.promocoes {
-    background-color: #ffeb3b;
-    padding: 15px;
-    margin-top: 20px;
+#home h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Destinos */
-#destinos .destinos-lista {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+#home p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
 }
 
-#destinos .destino {
-    width: 30%;
+#home .promocoes {
+    background: rgba(255, 255, 255, 0.9);
+    color: #0044cc;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-#destinos img {
+.slide img {
     width: 100%;
     height: auto;
 }
 
-/* Pacotes */
-#pacotes .pacote {
-    margin-bottom: 20px;
+.slide h2 {
+    margin: 15px 0;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 139, 0.7); /* Azul escuro com transparência */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Blog */
-#blog .post {
-    margin-bottom: 20px;
-}
-
-/* Contacto */
-#contacto form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contacto label {
-    margin-bottom: 5px;
-}
-
-#contacto input, #contacto textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-}
-
-#contacto input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+/* Botões de Navegação do Slideshow */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 68, 204, 0.8); /* Azul vibrante */
+    color: #fff;
     border: none;
+    font-size: 2rem;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+    transition: background 0.3s ease;
 }
 
-#contacto input[type="submit"]:hover {
-    background-color: #45a049;
+.prev:hover, .next:hover {
+    background: #003399; /* Azul mais escuro no hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Bolinhas Indicadoras */
+.dots {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #007BFF; /* Azul vivo para indicar o slide ativo */
+}
+
+.dot:hover {
+    background-color: #0056b3; /* Azul intermediário no hover */
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
+    padding: 20px;
+    background: #003399; /* Azul escuro */
     color: #fff;
     margin-top: 20px;
+}
+
+footer p {
+    font-size: 1rem;
 }

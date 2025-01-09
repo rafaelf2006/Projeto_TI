@@ -1,0 +1,95 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef3f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Título da seção Blog */
+#blog h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0056b3; /* Azul escuro */
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Container do Blog */
+#blog {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Estilo de cada Post */
+.post {
+    background: #ffffff;
+    border: 1px solid #cfd8e3; /* Azul claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post h3 {
+    font-size: 1.8rem;
+    color: #003f7f; /* Azul médio */
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #5a6978; /* Azul acinzentado */
+    margin: 5px 0;
+}
+
+/* Efeito Hover */
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-color: #007bff; /* Azul brilhante no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #blog {
+        padding: 0 10px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    #blog h2 {
+        font-size: 2rem;
+    }
+}
+/* Botão Voltar */
+.botao-voltar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botao-voltar a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-voltar a:hover {
+    background-color: #0056b3;
+}
